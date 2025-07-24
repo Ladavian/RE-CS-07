@@ -8,14 +8,14 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $(find ./feeds/luci/modules/luci-m
 
 #添加编译日期标识
 WRT_DATE_SHORT=$(echo $WRT_DATE | sed 's/\([0-9][0-9]\)\.\([0-9][0-9]\)\.\([0-9][0-9]\)-.*/20\1.\2.\3/')
-sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ Build by bluehj $WRT_DATE_SHORT')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
+sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ Build by iHJ $WRT_DATE_SHORT')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
 
 #修改Argon主题footer
 ARGON_HTM_FILES=$(find . -path "*/luci-theme-argon/*" -name "*.htm" -type f)
 if [ -n "$ARGON_HTM_FILES" ]; then
     for HTM_FILE in $ARGON_HTM_FILES; do
         # 替换包含 Powered by 的多行内容
-        sed -i '/<a class="luci-link".*Powered by.*<\/a>/,/<%= ver\.distversion %>/c\\t\tPowered by ImmortalWrt / Build by bluehj '"$WRT_DATE_SHORT" "$HTM_FILE" 2>/dev/null
+        sed -i '/<a class="luci-link".*Powered by.*<\/a>/,/<%= ver\.distversion %>/c\\t\tPowered by ImmortalWrt / Build by iHJ '"$WRT_DATE_SHORT" "$HTM_FILE" 2>/dev/null
     done
     echo "Argon theme footer has been modified!"
 fi
