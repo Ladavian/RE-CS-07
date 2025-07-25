@@ -34,8 +34,8 @@ jobs:
       matrix:
         CONFIG: [IPQ60XX-WIFI-NO]
         REPO_INFO:
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: iHJWRT, USEAPK: 'true'}
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: iHJWRT, USEAPK: 'false'}
+          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: immortalwrt, USEAPK: 'true'}
+          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: immortalwrt, USEAPK: 'false'}
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
