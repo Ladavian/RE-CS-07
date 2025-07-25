@@ -89,7 +89,7 @@ UPDATE_PACKAGE "luci-app-onliner" "bluehj777/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "lucky" "sirpdboy/luci-app-lucky" "main"
 UPDATE_PACKAGE "luci-app-onliner" "bluehj777/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "luci-app-advancedplus" "bluehj777/openwrt_pkgs" "main" "pkg"
-#UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
+UPDATE_PACKAGE "istore" "linkease/istore" "main"
 
 #UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
 UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman" "master"
